@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  
+  
   def new
     render :new
   end
@@ -14,4 +16,5 @@ class TopicsController < ApplicationController
   def update
     redirect_to 'topics/edit'
   end
+  
 end
