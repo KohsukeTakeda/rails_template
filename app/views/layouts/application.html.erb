@@ -8,15 +8,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
-    <link rel="stylesheet" href="<% = mix('/css/app.css') %>">
+    <link rel="stylesheet" href="<%= mix('/css/app.css') %>">
     
-    <script src="<% = mix('/js/bootstrap.js') %>"></script>
+    <script src="<%= mix('/js/bootstrap.js') %>"></script>
   </head>
 
   <body>
     <div class="main-container">
       <!--ナビゲーションバーの追加-->
-      <nav class="custom-navber">
+      <nav class="custom-navbar">
         <div id="menuToggle">
           <input type="checkbox" />
           <span></span>
@@ -42,7 +42,7 @@
       
       <% if alert %>
         <div class="alert alert-danger" role="alert">
-          <% alert %>
+          <%= alert %>
         </div>
        <% end %>
        

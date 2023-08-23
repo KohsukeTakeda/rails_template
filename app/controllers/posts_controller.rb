@@ -4,4 +4,8 @@ class PostsController < ApplicationController
     render :new
   end
   
+  def index
+    render :index
+  end
+  
 end
