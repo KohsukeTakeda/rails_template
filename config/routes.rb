@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   
   #課題2-5 3【応用】
   #new Action   edit Action
-  get 'topics/new' , to: 'topics#new' , as: "new_topics"
+  get 'topics/create' , to: 'topics#new' , as: "new_topics"
   
-  get 'topics/edit' , to: 'topics#edit' , sa: "edit_topics"
+  get 'topics/update' , to: 'topics#edit' , sa: "edit_topics"
   
 end
