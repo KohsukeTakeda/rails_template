@@ -7,5 +7,6 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import "setting/general";
+@import "hamburger";
 //以下を追加
-@import "hamburger-menu"
+@import "device"
