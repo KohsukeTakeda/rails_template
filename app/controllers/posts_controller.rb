@@ -1,9 +1,14 @@
 class PostsController < ApplicationController
-  
   before_action :authenticate_user!
 
   def index
-    render 'posts/index'
+    @title = params[:title]
+    if @title.present?
+      @posts = Post.where('title LIKE ?', "%#{@title}%")
+    else
+      @posts = Post.all
+    end
+    render :index
   end
 
   # ここから
