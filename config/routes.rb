@@ -6,12 +6,16 @@ Rails.application.routes.draw do
   # root "articles#index"
   
   #PostsController
-  get 'posts/new', to: 'posts#new', as: "new_post"
-  get '/', to: 'posts#index', as: "index_post"
-  #課題2-5 3【応用】
-  #new Action   edit Action
-  get 'topics/new', to: 'topics#new', as: "new_topics"
+  get '/', to: 'posts#index', as: 'index_post'
   
-  get 'topics/edit', to: 'topics#edit', as: "edit_topics"
+  get 'posts/new', to: 'posts#new', as: 'new_post'
+  post 'posts/new', to: 'posts#create', as: 'create_post'
+  
+  # TopicsController
+  get 'topics/new', to: 'topics#new', as: 'new_topics'
+  post 'topics/new', to: 'topics#edit', as: 'create_topics'  # ２−９応用３
+  
+  get 'topics/edit', to: 'topics#edit', as: 'edit_topics'
+  post 'topic/edit', to: 'topics#update', as: 'update_topics'
   
 end
